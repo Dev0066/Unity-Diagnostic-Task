@@ -122,7 +122,7 @@
 68-->C:\Users\Albert\Documents\Unity Diagnostic Task\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:18:5-101
 69            android:name="unity.build-id"
 69-->C:\Users\Albert\Documents\Unity Diagnostic Task\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:18:16-45
-70            android:value="0fc8e34f-e9ec-4df0-b808-5782671f8cec" />
+70            android:value="d3506307-4169-4c4b-9ce2-4613733ea3f9" />
 70-->C:\Users\Albert\Documents\Unity Diagnostic Task\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:18:46-98
 71    </application>
 72
