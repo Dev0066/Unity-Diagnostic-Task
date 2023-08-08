@@ -56,11 +56,11 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\RequestController.cs" />
-    <Compile Include="Assets\Scripts\AnimalsData.cs" />
     <Compile Include="Assets\Scripts\UiController.cs" />
-    <Compile Include="Assets\Scripts\AnimalCardUiProporties.cs" />
-    <Compile Include="Assets\Scripts\InfoPanelUiProporties.cs" />
+    <Compile Include="Assets\Scripts\RequestController.cs" />
+    <Compile Include="Assets\Scripts\AnimalCardUiProperties.cs" />
+    <Compile Include="Assets\Scripts\InfoPanelUiProperties.cs" />
+    <Compile Include="Assets\Scripts\AnimalsData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -653,6 +653,9 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.DeviceSimulator.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.DeviceSimulator.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -9,19 +9,21 @@ public class RequestController : MonoBehaviour
     [SerializeField] private string url;
     [SerializeField] private Button tryAgain;
     [SerializeField] private UiController uiController;
-    Coroutine cor;
+    private Coroutine currentCoroutine;
+
     private void Awake()
     {
         GetAnimalsData();
     }
+
     public void GetAnimalsData()
     {
-        if (cor != null)
-            StopCoroutine(cor);
-        cor = StartCoroutine(GetingAnimalsData());
+        if (currentCoroutine != null)
+            StopCoroutine(currentCoroutine);
+        currentCoroutine = StartCoroutine(GettingAnimalsData());
     }
 
-    IEnumerator GetingAnimalsData()
+    IEnumerator GettingAnimalsData()
     {
         UnityWebRequest webRequest = UnityWebRequest.Get(url);
 
@@ -29,7 +31,7 @@ public class RequestController : MonoBehaviour
 
         if (webRequest.isHttpError || webRequest.isNetworkError)
         {
-            Debug.Log("Somthing gona wrong, please check your interent conncetion and try again");
+            Debug.Log("Something gona wrong, please check your interent connection and try again");
             tryAgain.onClick.AddListener(() =>
             {
                 GetAnimalsData();
@@ -41,12 +43,8 @@ public class RequestController : MonoBehaviour
         {
             AnimalsData animalsData = JsonUtility.FromJson<AnimalsData>("{\"Animals\":"+webRequest.downloadHandler.text+"}");
             uiController.CreateAnimalsCards(animalsData);
-           
         }
 
-        cor = null;
-
-
-
+        currentCoroutine = null;
     }
 }
