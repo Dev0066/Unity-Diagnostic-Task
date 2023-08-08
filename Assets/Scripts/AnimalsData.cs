@@ -8,6 +8,7 @@ public class AnimalsData
 {
     public List<Animal> Animals = new List<Animal>();
 }
+
 [Serializable]
 public class Animal
 {
